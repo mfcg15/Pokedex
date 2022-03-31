@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" href="imagen.ico">
+    <title>Pokedex</title>
+</head>
+<body>
+    <div class="pokedex" id="pokedex">
+        <div class="shadows">
+          <div class="shadow-1"></div>
+          <div class="shadow-2 is-shadow-hidden" id="pokedex-shadow"></div>
+        </div>
+        <div class="al1">
+          <div class="al1__front face"></div>
+          <div class="al1__back face"></div>
+          <div class="al1__right face"></div>
+          <div class="al1__left face"></div>
+          <div class="al1__top face"></div>
+          <div class="al1__bottom face"></div>
+        </div>
+        <div class="al2">
+          <div class="al2__front face"></div>
+          <div class="al2__back face"></div>
+          <div class="al2__right face"></div>
+          <div class="al2__left face"></div>
+          <div class="al2__top face"></div>
+          <div class="al2__bottom face"></div>
+        </div>
+        <div class="al3">
+          <div class="al3__front face"></div>
+          <div class="al3__back face"></div>
+          <div class="al3__right face"></div>
+          <div class="al3__left face"></div>
+          <div class="al3__top face"></div>
+          <div class="al3__bottom face">  </div>
+        </div>
+        <div class="wheel flex face">
+          <div class="wheel-el flex face">
+            <div class="wheel-el__front face"> </div>
+            <div class="wheel-el__back face"> </div>
+            <div class="wheel-el__right face"> </div>
+            <div class="wheel-el__left face"> </div>
+            <div class="wheel-el__top face"> </div>
+            <div class="wheel-el__bottom face"> </div>
+          </div>
+          <div class="wheel-el flex face">
+            <div class="wheel-el__front face"> </div>
+            <div class="wheel-el__back face"> </div>
+            <div class="wheel-el__right face"> </div>
+            <div class="wheel-el__left face"> </div>
+            <div class="wheel-el__top face"> </div>
+            <div class="wheel-el__bottom face"> </div>
+          </div>
+          <div class="wheel-el flex face">
+            <div class="wheel-el__front face"> </div>
+            <div class="wheel-el__back face"> </div>
+            <div class="wheel-el__right face"> </div>
+            <div class="wheel-el__left face"> </div>
+            <div class="wheel-el__top face"> </div>
+            <div class="wheel-el__bottom face"> </div>
+          </div>
+          <div class="wheel-el flex face">
+            <div class="wheel-el__front face"> </div>
+            <div class="wheel-el__back face"> </div>
+            <div class="wheel-el__right face"> </div>
+            <div class="wheel-el__left face"> </div>
+            <div class="wheel-el__top face"> </div>
+            <div class="wheel-el__bottom face"> </div>
+          </div>
+        </div>
+        <div class="cover is-pokedex-open" id="pokedex-cover"> 
+          <div class="ar1"> 
+            <div class="ar1__front face"></div>
+            <div class="ar1__back face"></div>
+            <div class="ar1__right face"></div>
+            <div class="ar1__left face"></div>
+            <div class="ar1__top face">
+              <div class="screen-right" id="screenTipo"></div>
+              <div class="buttons-right-1">
+                <div class="button-right">
+                  <div class="button-right__front face"></div>
+                  <div class="button-right__back face"></div>
+                  <div class="button-right__right face"></div>
+                  <div class="button-right__left face"></div>
+                  <div class="button-right__top face"></div>
+                  <div class="button-right__bottom face"></div>
+                </div>
+                <div class="button-right">
+                  <div class="button-right__front face"></div>
+                  <div class="button-right__back face"></div>
+                  <div class="button-right__right face"></div>
+                  <div class="button-right__left face"></div>
+                  <div class="button-right__top face"></div>
+                  <div class="button-right__bottom face"></div>
+                </div>
+                <div class="button-right">
+                  <div class="button-right__front face"></div>
+                  <div class="button-right__back face"></div>
+                  <div class="button-right__right face"></div>
+                  <div class="button-right__left face"></div>
+                  <div class="button-right__top face"></div>
+                  <div class="button-right__bottom face"></div>
+                </div>
+                <div class="button-right">
+                  <div class="button-right__front face"></div>
+                  <div class="button-right__back face"></div>
+                  <div class="button-right__right face"></div>
+                  <div class="button-right__left face"></div>
+                  <div class="button-right__top face"></div>
+                  <div class="button-right__bottom face"></div>
+                </div>
+                <div class="button-right">
+                  <div class="button-right__front face"></div>
+                  <div class="button-right__back face"></div>
+                  <div class="button-right__right face"></div>
+                  <div class="button-right__left face"></div>
+                  <div class="button-right__top face"></div>
+                  <div class="button-right__bottom face"></div>
+                </div>
+                <div class="button-right">
+                  <div class="button-right__front face"></div>
+                  <div class="button-right__back face"></div>
+                  <div class="button-right__right face"></div>
+                  <div class="button-right__left face"></div>
+                  <div class="button-right__top face"></div>
+                  <div class="button-right__bottom face"></div>
+                </div>
+                <div class="button-right">
+                  <div class="button-right__front face"></div>
+                  <div class="button-right__back face"></div>
+                  <div class="button-right__right face"></div>
+                  <div class="button-right__left face"></div>
+                  <div class="button-right__top face"></div>
+                  <div class="button-right__bottom face"></div>
+                </div>
+                <div class="button-right">
+                  <div class="button-right__front face"></div>
+                  <div class="button-right__back face"></div>
+                  <div class="button-right__right face"></div>
+                  <div class="button-right__left face"></div>
+                  <div class="button-right__top face"></div>
+                  <div class="button-right__bottom face"></div>
+                </div>
+                <div class="button-right">
+                  <div class="button-right__front face"></div>
+                  <div class="button-right__back face"></div>
+                  <div class="button-right__right face"></div>
+                  <div class="button-right__left face"></div>
+                  <div class="button-right__top face"></div>
+                  <div class="button-right__bottom face"></div>
+                </div>
+                <div class="button-right">
+                  <div class="button-right__front face"></div>
+                  <div class="button-right__back face"></div>
+                  <div class="button-right__right face"></div>
+                  <div class="button-right__left face"></div>
+                  <div class="button-right__top face"></div>
+                  <div class="button-right__bottom face"></div>
+                </div>
+              </div>
+              <div class="buttons-right-2">
+                <div class="button-right">
+                  <div class="button-right__front button-right__front--white face"></div>
+                  <div class="button-right__back button-right__back--white face"></div>
+                  <div class="button-right__right button-right__right--white face"></div>
+                  <div class="button-right__left button-right__left--white face"></div>
+                  <div class="button-right__top button-right__top--white face"></div>
+                  <div class="button-right__bottom button-right__bottom--white face"></div>
+                </div>
+                <div class="button-right">
+                  <div class="button-right__front button-right__front--white face"></div>
+                  <div class="button-right__back button-right__back--white face"></div>
+                  <div class="button-right__right button-right__right--white face"></div>
+                  <div class="button-right__left button-right__left--white face"></div>
+                  <div class="button-right__top button-right__top--white face"></div>
+                  <div class="button-right__bottom button-right__bottom--white face"></div>
+                </div>
+                <div class="button-right-circulo">
+                  <div class="button-right__front button-right__front--yellow face"></div>
+                  <div class="button-right__back button-right__back--yellow face"></div>
+                  <div class="button-right__right button-right__right--yellow face"></div>
+                  <div class="button-right__left button-right__left--yellow face"></div>
+                  <div class="button-right__top button-right__top--yellow face"></div>
+                  <div class="button-right__bottom button-right__bottom--yellow face"></div>
+                </div>
+              </div>
+              <div class="buttons-right-3">
+                <div class="button-large">
+                  <div class="button-large__front face"></div>
+                  <div class="button-large__back face"></div>
+                  <div class="button-large__right face"></div>
+                  <div class="button-large__left face"></div>
+                  <div class="button-large__top face" id="screenWeight">
+                  </div>
+                  <div class="button-large__bottom face"></div>
+                </div>
+                <div class="button-large">
+                  <div class="button-large__front face"></div>
+                  <div class="button-large__back face"></div>
+                  <div class="button-large__right face"></div>
+                  <div class="button-large__left face"></div>
+                  <div class="button-large__top face" id="screenHeight">
+                  </div>
+                  <div class="button-large__bottom face"></div>
+                </div>
+              </div>
+              <div class="buttons-right-4">
+                <div class="button-right-prueba">
+                  <div class="button-right__front-prueba face"></div>
+                  <div class="button-right__back-prueba  face"></div>
+                  <div class="button-right__right-prueba  face"></div>
+                  <div class="button-right__left-prueba  face"></div>
+                  <div class="button-right__top-prueba  face"></div>
+                  <div class="button-right__bottom-prueba  face"></div>
+                </div>
+                <div class="button-right-prueba">
+                  <div class="button-right__front-prueba face"></div>
+                  <div class="button-right__back-prueba  face"></div>
+                  <div class="button-right__right-prueba  face"></div>
+                  <div class="button-right__left-prueba  face"></div>
+                  <div class="button-right__top-prueba  face"></div>
+                  <div class="button-right__bottom-prueba  face"></div>
+                </div>
+              </div>
+            </div>
+            <div class="ar1__bottom face">
+              <div class="triangulo_tapa"></div>
+              <div class="borde_tapa"></div>
+            </div>
+          </div>
+          <div class="ar2">
+            <div class="ar2__front face"></div>
+            <div class="ar2__back face"></div>
+            <div class="ar2__right face"></div>
+            <div class="ar2__left face"></div>
+            <div class="ar2__top face"></div>
+            <div class="ar2__bottom face"></div>
+          </div>
+        </div>
+        <div class="screen-left">    
+          <div class="screen-left__front face"></div>
+          <div class="screen-left__back face"></div>
+          <div class="screen-left__right face"></div>
+          <div class="screen-left__left face"></div>
+          <div class="screen-left__top face">
+            <div class="circulo_rojo circulo_uno"></div>
+            <div class="circulo_rojo circulo_dos"></div>
+            <div class="circulo_rojo circulo_tres"></div>
+            <div class="cont_lineas">
+              <div class="lineas"></div>
+              <div class="lineas"></div>
+              <div class="lineas"></div>
+              <div class="lineas"></div>
+            </div>
+            <div class="screen-show-pokemon" id="ImagenPokemon">
+            </div>
+          </div>
+          <div class="screen-left__bottom face"></div>
+        </div>
+        <div class="contenedor_botones">
+          <div class="button-left-prueba">
+            <div class="button-right__front-prueba face"></div>
+            <div class="button-right__back-prueba  face"></div>
+            <div class="button-right__right-prueba  face"></div>
+            <div class="button-right__left-prueba  face"></div>
+            <div class="button-right__top-prueba  button-right__top--red-prueba face"></div>
+            <div class="button-right__bottom-prueba button-right__bottom--red-prueba face"></div>
+          </div>
+          <div class="button-left-prueba">
+            <div class="button-right__front-prueba face"></div>
+            <div class="button-right__back-prueba  face"></div>
+            <div class="button-right__right-prueba  face"></div>
+            <div class="button-right__left-prueba  face"></div>
+            <div class="button-right__top-prueba  button-right__top--blue-prueba face"></div>
+            <div class="button-right__bottom-prueba  button-right__bottom--blue-prueba face"></div>
+          </div>
+        </div>
+        <div class="contenedor_boton_negro">
+            <div class="button-right__front button-right__front--black face"></div>
+            <div class="button-right__back button-right__back--black face"></div>
+            <div class="button-right__right button-right__right--black face"></div>
+            <div class="button-right__left button-right__left--black face"></div>
+            <div class="button-right__top button-right__top--black face" id="btnEscuchar"></div>
+            <div class="button-right__bottom button-right__bottom--black face"></div>
+        </div>
+        <div class="screen-left-2">       
+          <div class="screen-left-2__front face"></div>
+          <div class="screen-left-2__back face"></div>
+          <div class="screen-left-2__right face"></div>
+          <div class="screen-left-2__left face"></div>
+          <div class="screen-left-2__top face">
+              <input type="text" class="pokemon-number input-screen-left-2" id="txt_pokemon">
+          </div>
+          <div class="screen-left-2__bottom face"></div>
+        </div>
+        <div class="arrows">
+          <div class="arrow-h">     
+            <div class="arrow-h__front face"></div>
+            <div class="arrow-h__back face"></div>
+            <div class="arrow-h__right face"></div>
+            <div class="arrow-h__left face"></div>
+            <div class="arrow-h__top face">
+              <span class="flecha izquierda  arrow-back" id="arrow-back"></span>
+              <span class="flecha derecha arrow-next" id="arrow-next"></span>
+            </div>
+            <div class="arrow-h__bottom face"></div>
+          </div>
+          <div class="arrow-v">
+            <div class="arrow-v__front face"></div>
+            <div class="arrow-v__back face"></div>
+            <div class="arrow-v__right face"></div>
+            <div class="arrow-v__left face"></div>
+            <div class="arrow-v__top face">
+              <span class="flecha arriba arrow-up" id="arrow-up"></span>
+              <span class="flecha abajo arrow-down" id="arrow-down"></span>
+            </div>
+            <div class="arrow-v__bottom face"></div>
+          </div>
+        </div>
+        <div class="led" id="led"></div>
+        <div class="led-a"></div>
+        <div class="led-b"></div>
+        <div class="led-c"></div>
+      </div>
+    <script  src="main.js"></script>
+</body>
+</html>

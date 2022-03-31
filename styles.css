@@ -1,0 +1,1421 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    transform-style: preserve-3d;
+    -webkit-tap-highlight-color: transparent;
+}
+/* Generic */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #3647bd;
+    font-family: 'Press Start 2P', cursive;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.face {
+    position: absolute;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/***********************/
+/* Pokedex ( Contenedor principal)*/
+/***********************/
+.pokedex {
+    position: absolute;
+    width: 46vmax;
+    height: 36vmax;
+    transform: perspective(1590px) rotateX(0deg) rotateZ(0deg) translateZ(-0.001vw); /*1080 1*/
+    transition: transform 0.2s;
+}
+.pokedex::before {
+    content: 'Pokedex';
+    position: absolute;
+    bottom: 2vmax;
+    right: 0;
+    font-size: 2vmax;
+    color: #dedede;
+}
+.shadows {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 47vmax;
+    height: 37vmax;
+    overflow: hidden;
+    transform: translateZ(-0.65vmax);
+}
+.shadow-1 {
+    position: absolute;
+    width: 25vmax;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #1f296e;
+}
+.shadow-2 {
+    position: absolute;
+    width: 24vmax;
+    height: 28vmax;
+    background-color: #1f296e;
+    right: 0;
+    bottom: 0;
+    transition: right 2s;
+}
+/***********************/
+/* Parte izquierda pokedex (Objetos independiente) */
+/***********************/
+.al1 {
+    position: absolute;
+    width: 23vmax;
+    height: 36vmax;
+    bottom: 0;
+    left: 0;
+}
+.al1__front {
+    width: 23vmax;
+    height: 1.25vmax;
+    transform-origin: bottom left;
+    transform: rotateX(-90deg) translateZ(34.75vmax);
+}
+.al1__back {
+    width: 23vmax;
+    height: 1.25vmax;
+    transform-origin: top left;
+    transform: rotateX(-90deg) rotateY(180deg) translateX(-23vmax) translateY(-1.25vmax);
+}
+.al1__right {
+    width: 36vmax;
+    height: 1.25vmax;
+    transform-origin: top left;
+    transform: rotateY(90deg) rotateZ(-90deg) translateZ(23vmax) translateX(-36vmax) translateY(-1.25vmax);
+}
+.al1__left {
+    width: 36vmax;
+    height: 1.25vmax;
+    transform-origin: top left;
+    transform: rotateY(-90deg) rotateZ(90deg) translateY(-1.25vmax);
+}
+.al1__top {
+    width: 23vmax;
+    height: 36vmax;
+    transform-origin: top left;
+    transform: translateZ(1.25vmax);
+    border-bottom-left-radius: 15px;
+}
+.al1__bottom {
+    width: 23vmax;
+    height: 36vmax;
+    transform-origin: top left;
+    transform: rotateY(180deg) translateX(-23vmax);
+}
+/* .al1__front {
+    background-color: #7a0619;
+} */
+.al1__back {
+    background-color: #ab0823;
+}
+.al1__right {
+    background-color: #ab0823;
+}
+/* .al1__left {
+    background-color: #7a0619;
+} */
+.al1__top {
+    background-color: #dc0a2d;
+}
+/* .al1__bottom {
+    background-color: #7a0619;
+} */
+.al1__right {
+    background-color: #93071e;
+}
+.al2 {
+    position: absolute;
+    width: 23vmax;
+    height: 4vmax;
+    top: 0;
+    left: 0;
+}
+.al2__front {
+    width: 23vmax;
+    height: 2.2vmax;
+    transform-origin: bottom left;
+    transform: rotateX(-90deg) translateZ(1.8vmax);
+}
+.al2__back {
+    width: 23vmax;
+    height: 2.2vmax;
+    transform-origin: top left;
+    transform: rotateX(-90deg) rotateY(180deg) translateX(-23vmax) translateY(-2.2vmax);
+}
+.al2__right {
+    width: 4vmax;
+    height: 2.2vmax;
+    transform-origin: top left;
+    transform: rotateY(90deg) rotateZ(-90deg) translateZ(23vmax) translateX(-4vmax) translateY(-2.2vmax);
+}
+.al2__left {
+    width: 4vmax;
+    height: 2.2vmax;
+    transform-origin: top left;
+    transform: rotateY(-90deg) rotateZ(90deg) translateY(-2.2vmax);
+}
+.al2__top {
+    width: 23vmax;
+    height: 4vmax;
+    transform-origin: top left;
+    transform: translateZ(2.2vmax);
+}
+.al2__bottom {
+    width: 23vmax;
+    height: 4vmax;
+    transform-origin: top left;
+    transform: rotateY(180deg) translateX(-23vmax);
+}
+.al2__front {
+    background-color: #7a0619;
+}
+.al2__back {
+    background-color: #ab0823;
+}
+.al2__right {
+    background-color: #ab0823;
+}
+.al2__left {
+    background-color: #7a0619;
+}
+.al2__top {
+    background-color: #dc0a2d;
+}
+.al2__bottom {
+    background-color: #7a0619;
+}
+.al3 {
+    position: absolute;
+    width: 13.75vmax;
+    height: 5vmax;
+    top: 4vmax;
+    left: 0;
+    transform: translateZ(1.26vmax);
+}
+.al3__front {
+    width: 13.75vmax;
+    height: 0.95vmax;
+    transform-origin: bottom left;
+    transform: rotateX(-90deg) translateZ(4.05vmax);
+}
+.al3__back {
+    width: 13.75vmax;
+    height: 0.95vmax;
+    transform-origin: top left;
+    transform: rotateX(-90deg) rotateY(180deg) translateX(-13.75vmax) translateY(-0.95vmax);
+}
+.al3__right {
+    width: 5vmax;
+    height: 0.95vmax;
+    transform-origin: top left;
+    transform: rotateY(90deg) rotateZ(-90deg) translateZ(13.75vmax) translateX(-5vmax) translateY(-0.95vmax);
+}
+.al3__left {
+    width: 5vmax;
+    height: 0.95vmax;
+    transform-origin: top left;
+    transform: rotateY(-90deg) rotateZ(90deg) translateY(-0.95vmax);
+}
+.al3__top {
+    width: 13.75vmax;
+    height: 5vmax;
+    transform-origin: top left;
+    transform: translateZ(0.95vmax);
+}
+.al3__bottom {
+    width: 13.75vmax;
+    height: 5vmax;
+    transform-origin: top left;
+    transform: rotateY(180deg) translateX(-13.75vmax);
+}
+.al3__top {
+    background-image: linear-gradient(-65deg, transparent 2.1vmax, #dc0a2d 2.1vmax);
+}
+.al3__bottom {
+    background-image: linear-gradient(65deg, transparent 2.1vmax, #7a0619 2.1vmax);
+}
+.al3__front {
+    background-image: linear-gradient(to right, #7a0619 11.5vmax, transparent 11.5vmax);
+}
+.al3__back {
+    background-color: #7a0619;
+}
+.al3__left {
+    background-color: #ab0823;
+}
+.al3__right::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 5.6vmax;
+    height: 100%;
+    background-color: #ab0823;
+    transform-origin: top right;
+    transform: rotateY(-25deg);
+}
+/***********************/
+/* Contenido izquierda */
+/***********************/
+.screen-left {
+    position: absolute;
+    top: 11vmax;
+    left: 2.5vmax;
+    width: 16vmax;
+    height: 13.5vmax;
+    transform: translateZ(1.25vmax);
+    box-shadow: 0.35vmax 0.35vmax 0.35vmax rgba(34, 34, 34, .35);
+    border-radius: 10px;
+    border-bottom-left-radius: 36px;
+}
+.screen-left__front {
+    width: 16vmax;
+    height: 0.25vmax;
+    transform-origin: bottom left;
+    transform: rotateX(-90deg) translateZ(13.25vmax);
+}
+.screen-left__back {
+    width: 16vmax;
+    height: 0.25vmax;
+    transform-origin: top left;
+    transform: rotateX(-90deg) rotateY(180deg) translateX(-16vmax) translateY(-0.25vmax);
+}
+.screen-left__right {
+    width: 13.5vmax;
+    height: 0.25vmax;
+    transform-origin: top left;
+    transform: rotateY(90deg) rotateZ(-90deg) translateZ(16vmax) translateX(-13.5vmax) translateY(-0.25vmax);
+}
+.screen-left__left {
+    width: 13.5vmax;
+    height: 0.25vmax;
+    transform-origin: top left;
+    transform: rotateY(-90deg) rotateZ(90deg) translateY(-0.25vmax);
+}
+.screen-left__top {
+    width: 16vmax;
+    height: 13.5vmax;
+    transform-origin: top left;
+    transform: translateZ(0.25vmax);
+}
+.screen-left__bottom {
+    width: 16vmax;
+    height: 13.5vmax;
+    transform-origin: top left;
+    transform: rotateY(180deg) translateX(-16vmax);
+}
+.screen-left__front {
+    background-color: #000;
+}
+.screen-left__back {
+    background-color: #090909;
+}
+.screen-left__right {
+    background-color: #090909;
+}
+
+.screen-left__top {
+    background-color: #222;
+}
+.screen-left__bottom {
+    border-radius: 10px;
+    background: linear-gradient(40deg, transparent 4%, #dc0a2d 1%);
+}
+.screen-left__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: linear-gradient(40deg, transparent 4%, #dedede 1%);
+}
+.screen-left__top::before {
+    content: '';
+    position: absolute;
+    width: 13vmax;
+    height: 10.5vmax;
+    background-color: #000;
+    animation: pokemon-screen 1s infinite;
+}
+
+.pokemon {
+    position: absolute;
+    width: 13vmax;
+    height: 13vmax;
+    padding: 1.5vmax 1vmax 1vmax;
+    transform: rotateX(-90deg) translateY(-6.5vmax);
+    background-image: linear-gradient(to top, rgba(41, 170, 253, .025), rgba(41, 170, 253, .2), rgba(41, 170, 253, .3));
+    border-top-left-radius: 0.5vmax;
+    border-top-right-radius: 0.5vmax;
+    box-shadow: 0.2vmax 0.2vmax 2vmax rgba(41, 170, 253, .1), -0.2vmax 0.2vmax 2vmax rgba(41, 170, 253, .1), 0.2vmax -0.2vmax 2vmax rgba(41, 170, 253, .1), -0.2vmax -0.2vmax 2vmax rgba(41, 170, 253, .1);
+    transition: opacity 2s linear 1s;
+}
+.pokemon::before {
+    content: '';
+    position: absolute;
+    width: 96%;
+    left: 2%;
+    height: 100%;
+    background-image: repeating-linear-gradient(rgba(41, 170, 253, .0175) 0, rgba(41, 170, 253, .0175) 1vmax, transparent 1vmax, transparent 2vmax);
+    background-size: 200% 200%;
+    animation: pokemon-bg 4s linear infinite;
+    background-position: 0 0;
+}
+.pokemon:hover .pokemon-image {
+    transform: translateZ(1vmax) scale(1.05);
+    transition: transform 0.2s;
+    opacity: 1;
+}
+.pokemon-url {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.pokemon-name {
+    font-weight: normal;
+    font-size: 1vmax;
+    transition: 2s linear 1s;
+    color: #001827;
+    text-shadow: 0.05vw 0.05vw 0.2vw rgba(41, 170, 253, .45);
+    animation: pokemon-img 1s infinite alternate;
+}
+.pokemon-image {
+    max-width: 70%;
+    object-fit: contain;
+    transition: 2s linear 1s;
+    animation: pokemon-img 1s infinite alternate;
+    filter: drop-shadow(0.75vmax 0.75vmax 0.75vmax rgba(34, 34, 34, .5));
+}
+.pokemon-number {
+    color: #204526;
+    font-size: 1vmax;
+    line-height: 1;
+    transition: 2s linear 1s;
+}
+
+.entrada
+{
+    background-color: transparent; 
+    width: 100%;
+}
+
+.pokemon-author {
+    font-weight: normal;
+    font-size: 0.85vmax;
+    color: #dedede;
+    line-height: 2;
+}
+.pokemon-tags {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 2vmax;
+    width: 100%;
+    padding: 0 2vmax;
+}
+.pokemon-tag {
+    font-size: 0.85vmax;
+    color: #dedede;
+}
+.screen-left-2 {
+    display: flex;
+    position: absolute;
+    bottom: 3.5vmax;
+    left: 5vmax;
+    width: 6vmax;
+    height: 3vmax;
+    transform: translateZ(1.25vmax);
+    background-color: #51ad60;
+    box-shadow: inset 0.2vmax 0.2vmax 0 #306839, inset -0.1vmax -0.1vmax 0 #306839, 0.35vmax 0.35vmax 0.35vmax rgba(34, 34, 34, .35);
+}
+
+.input-screen-left-2
+{
+    border: none;
+    outline: none;
+    padding-left: 5px;
+    width: 100%; 
+    background-color: transparent; 
+    height: 3vmax
+}
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 2vmax;
+    left: 12.5vmax;
+    width: 6vmax;
+    height: 6vmax;
+    transform: translateZ(1.25vmax);
+}
+.arrow-h {
+    position: absolute;
+    width: 6vmax;
+    height: 2vmax;
+    box-shadow: 0.35vmax 0.35vmax 0.35vmax rgba(34, 34, 34, .35);
+}
+.arrow-h__front {
+    width: 6vmax;
+    height: 0.5vmax;
+    transform-origin: bottom left;
+    transform: rotateX(-90deg) translateZ(1.5vmax);
+}
+.arrow-h__back {
+    width: 6vmax;
+    height: 0.5vmax;
+    transform-origin: top left;
+    transform: rotateX(-90deg) rotateY(180deg) translateX(-6vmax) translateY(-0.5vmax);
+}
+.arrow-h__right {
+    width: 2vmax;
+    height: 0.5vmax;
+    transform-origin: top left;
+    transform: rotateY(90deg) rotateZ(-90deg) translateZ(6vmax) translateX(-2vmax) translateY(-0.5vmax);
+}
+.arrow-h__left {
+    width: 2vmax;
+    height: 0.5vmax;
+    transform-origin: top left;
+    transform: rotateY(-90deg) rotateZ(90deg) translateY(-0.5vmax);
+}
+.arrow-h__top {
+    width: 6vmax;
+    height: 2vmax;
+    transform-origin: top left;
+    transform: translateZ(0.5vmax);
+}
+.arrow-h__bottom {
+    width: 6vmax;
+    height: 2vmax;
+    transform-origin: top left;
+    transform: rotateY(180deg) translateX(-6vmax);
+}
+.arrow-h__front {
+    background-color: #000;
+}
+.arrow-h__back {
+    background-color: #090909;
+}
+.arrow-h__right {
+    background-color: #090909;
+}
+.arrow-h__left {
+    background-color: #000;
+}
+.arrow-h__top {
+    background-color: #222;
+}
+.arrow-h__bottom {
+    background-color: #000;
+}
+.arrow-v {
+    position: absolute;
+    width: 2vmax;
+    height: 6vmax;
+    box-shadow: 0.35vmax 0.35vmax 0.35vmax rgba(34, 34, 34, .35);
+}
+.arrow-v__front {
+    width: 2vmax;
+    height: 0.5vmax;
+    transform-origin: bottom left;
+    transform: rotateX(-90deg) translateZ(5.5vmax);
+}
+.arrow-v__back {
+    width: 2vmax;
+    height: 0.5vmax;
+    transform-origin: top left;
+    transform: rotateX(-90deg) rotateY(180deg) translateX(-2vmax) translateY(-0.5vmax);
+}
+.arrow-v__right {
+    width: 6vmax;
+    height: 0.5vmax;
+    transform-origin: top left;
+    transform: rotateY(90deg) rotateZ(-90deg) translateZ(2vmax) translateX(-6vmax) translateY(-0.5vmax);
+}
+.arrow-v__left {
+    width: 6vmax;
+    height: 0.5vmax;
+    transform-origin: top left;
+    transform: rotateY(-90deg) rotateZ(90deg) translateY(-0.5vmax);
+}
+.arrow-v__top {
+    width: 2vmax;
+    height: 6vmax;
+    transform-origin: top left;
+    transform: translateZ(0.5vmax);
+}
+.arrow-v__bottom {
+    width: 2vmax;
+    height: 6vmax;
+    transform-origin: top left;
+    transform: rotateY(180deg) translateX(-2vmax);
+}
+.arrow-v__front {
+    background-color: #000;
+}
+.arrow-v__back {
+    background-color: #090909;
+}
+.arrow-v__right {
+    background-color: #090909;
+}
+.arrow-v__left {
+    background-color: #000;
+}
+.arrow-v__top {
+    background-color: #222;
+}
+.arrow-v__bottom {
+    background-color: #000;
+}
+.arrow-back, .arrow-next , .arrow-up, .arrow-down {
+    position: absolute;
+    width: 2vmax;
+    height: 2vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #dedede;
+    font-size: 1vmax;
+    padding-top: 0.25vmax;
+    animation: pokemon-arrow 2s infinite;
+}
+
+.arrow-back {
+    left: 0;
+}
+.arrow-next {
+    right: 0;
+}
+
+.arrow-up {
+    top: 0;
+}
+.arrow-down {
+    bottom: 0;
+}
+
+.led, .led-a, .led-b, .led-c {
+    position: absolute;
+    top: 2vmax;
+    left: 2.5vmax;
+    width: 4vmax;
+    height: 4vmax;
+    transform: translateZ(2.25vmax);
+    border-radius: 50%;
+    background-color: #29aafd;
+    border: 4px solid white;
+}
+.led {
+    box-shadow: inset 0.25vmax 0.25vmax 0.35vmax #0293f1, inset -0.25vmax -0.25vmax 0.35vmax #0293f1; 
+}
+.led-a, .led-b, .led-c {
+    left: 7vmax;
+    width: 0.75vmax;
+    height: 0.75vmax;
+    background-color: #f63c5b;
+    border: none;
+}
+.led-b {
+    left: 8vmax;
+    background-color: #fae017;
+}
+.led-c {
+    left: 9vmax;
+    background-color: #51ad60;
+}
+/***********************/
+/* Parte derecha pokedex (Objetos unificado) */
+/***********************/
+.cover {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 23vmax;
+    height: 36vmax;
+    transform-origin: left;
+    transition: transform 2s, translate 2s;
+}
+.ar1 {
+    position: absolute;
+    width: 23vmax;
+    height: 27vmax;
+    bottom: 0;
+    right: 0;
+}
+.ar1__front {
+    width: 23vmax;
+    height: 1.25vmax;
+    transform-origin: bottom left;
+    transform: rotateX(-90deg) translateZ(25.75vmax);
+}
+.ar1__back {
+    width: 23vmax;
+    height: 1.25vmax;
+    transform-origin: top left;
+    transform: rotateX(-90deg) rotateY(180deg) translateX(-23vmax) translateY(-1.25vmax);
+}
+.ar1__right {
+    width: 27vmax;
+    height: 1.25vmax;
+    transform-origin: top left;
+    transform: rotateY(90deg) rotateZ(-90deg) translateZ(23vmax) translateX(-27vmax) translateY(-1.25vmax);
+}
+.ar1__left {
+    width: 27vmax;
+    height: 1.25vmax;
+    transform-origin: top left;
+    transform: rotateY(-90deg) rotateZ(90deg) translateY(-1.25vmax);
+}
+.ar1__top {
+    width: 23vmax;
+    height: 27vmax;
+    transform-origin: top left;
+    transform: translateZ(1.25vmax);
+}
+.ar1__bottom {
+    width: 23vmax;
+    height: 27vmax;
+    transform-origin: top left;
+    transform: rotateY(180deg) translateX(-23vmax);
+}
+.ar1__front {
+    background-color: #7a0619;
+}
+.ar1__right {
+    background-color: #ab0823;
+}
+.ar1__left {
+    background-color: #93071e;
+}
+.ar1__top {
+    background-color: #dc0a2d;
+}
+.ar1__bottom {
+    background-color: #f40c32;
+}
+.ar2 {
+    position: absolute;
+    width: 11.5vmax;
+    height: 5vmax;
+    top: 4vmax;
+    left: 0;
+}
+.ar2__front {
+    width: 11.5vmax;
+    height: 1.25vmax;
+    transform-origin: bottom left;
+    transform: rotateX(-90deg) translateZ(3.75vmax);
+}
+.ar2__back {
+    width: 11.5vmax;
+    height: 1.25vmax;
+    transform-origin: top left;
+    transform: rotateX(-90deg) rotateY(180deg) translateX(-11.5vmax) translateY(-1.25vmax);
+}
+.ar2__right {
+    width: 5vmax;
+    height: 1.25vmax;
+    transform-origin: top left;
+    transform: rotateY(90deg) rotateZ(-90deg) translateZ(11.5vmax) translateX(-5vmax) translateY(-1.25vmax);
+}
+.ar2__left {
+    width: 5vmax;
+    height: 1.25vmax;
+    transform-origin: top left;
+    transform: rotateY(-90deg) rotateZ(90deg) translateY(-1.25vmax);
+}
+.ar2__top {
+    width: 11.5vmax;
+    height: 5vmax;
+    transform-origin: top left;
+    transform: translateZ(1.25vmax);
+}
+.ar2__bottom {
+    width: 11.5vmax;
+    height: 5vmax;
+    transform-origin: top left;
+    transform: rotateY(180deg) translateX(-11.5vmax);
+}
+.ar2__top {
+    background-image: linear-gradient(65deg, #dc0a2d 10.45vmax, transparent 10.45vmax);
+}
+.ar2__bottom {
+    background-image: linear-gradient(-65deg, #f40c32 10.45vmax, transparent 10.45vmax);
+}
+.ar2__front {
+    background-color: #ab0823;
+}
+.ar2__back {
+    background-image: linear-gradient(to right, transparent 2.4vmax, #ab0823 2.4vmax);
+}
+.ar2__left {
+    background-color: #93071e;
+}
+.ar2__right::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 5.6vmax;
+    height: 100%;
+    background-color: #ab0823;
+    transform-origin: bottom left;
+    transform: rotateY(25deg);
+}
+/***********************/
+/* Contenido derecha */
+/***********************/
+.screen-right {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 2vmax;
+    right: 2.15vmax;
+    width: 18vmax;
+    height: 6vmax;
+    padding: 0.8vmax;
+    background-color: #222;
+    box-shadow: inset 0.25vmax 0.25vmax 0 #000, inset -0.15vmax -0.15vmax 0 #000, 0.35vmax 0.35vmax 0.35vmax rgba(34, 34, 34, .35);
+}
+.buttons-right-1 {
+    position: absolute;
+    top: 9vmax;
+    right: 2.15vmax;
+    width: 18vmax;
+    height: 6vmax;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* box-shadow: 0.35vmax 0.35vmax 0.35vmax rgba(34, 34, 34, .35); */
+}
+.button-right {
+    width: 3.2vmax;
+    height: 3.2vmax;
+}
+.button-right__front {
+    width: 3.2vmax;
+    /* height: 0.5vmax; */
+    transform-origin: bottom left;
+    transform: rotateX(-90deg) translateZ(2.45vmax);
+}
+.button-right__back {
+    width: 3.2vmax;
+    /* height: 0.5vmax; */
+    transform-origin: top left;
+    transform: rotateX(-90deg) rotateY(180deg) translateX(-2.925vmax) translateY(-0.5vmax);
+}
+.button-right__right {
+    width: 3.2vmax;
+    transform-origin: top left;
+    transform: rotateY(90deg) rotateZ(-90deg) translateZ(2.925vmax) translateX(-2.95vmax) translateY(-0.5vmax);
+}
+.button-right__left {
+    width: 3.2vmax;
+    /* height: 0.5vmax; */
+    transform-origin: top left;
+    transform: rotateY(-90deg) rotateZ(90deg) translateY(-0.5vmax);
+}
+.button-right__top {
+    width: 3.1vmax;
+    height: 3vmax;
+    transform-origin: top left;
+    transform: translateZ(0.5vmax);
+}
+.button-right__bottom {
+    width: 3.1vmax;
+    height: 3vmax;
+    transform-origin: top left;
+    transform: rotateY(180deg) translateX(-2.925vmax);
+}
+.button-right__front {
+    background-color: #0274be;
+}
+.button-right__back {
+    background-color: #0293f1;
+}
+.button-right__right {
+    background-color: #0293f1;
+}
+.button-right__left {
+    background-color: #0274be;
+}
+.button-right__top {
+    background-color: #29aafd;
+}
+.button-right__bottom {
+    background-color: #0274be;
+}
+.buttons-right-2 {
+    position: absolute;
+    top: 18vmax;
+    right: 2.15vmax;
+    width: 18vmax;
+    height: 3vmax;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+.button-right{
+    box-shadow: 0.35vmax 0.35vmax 0.35vmax rgba(34, 34, 34, .35);
+}
+
+.button-right-circulo{
+    box-shadow: 0.35vmax 0.35vmax 0.35vmax rgba(34, 34, 34, .35);
+    border-radius: 50%;
+}
+
+.button-right__front--white {
+    background-color: #ababab;
+}
+.button-right__back--white {
+    background-color: #c5c5c5;
+}
+.button-right__right--white {
+    background-color: #c5c5c5;
+}
+.button-right__left--white {
+    background-color: #ababab;
+}
+.button-right__top--white {
+    background-color: #dedede;
+}
+.button-right__bottom--white {
+    background-color: #ababab;
+}
+.button-right__front--yellow {
+    background-color: #a79504;
+    border-radius: 50%;
+}
+.button-right__back--yellow {
+    background-color: #d9c105;
+}
+.button-right__right--yellow {
+    background-color: #d9c105;
+    border-radius: 50%;
+}
+.button-right__left--yellow {
+    background-color: #a79504;
+    border-radius: 50%;
+}
+.button-right__top--yellow {
+    background-color: #fae017;
+    border-radius: 50%;
+}
+.button-right__bottom--yellow {
+    background-color: #a79504;
+    border-radius: 50%;
+}
+
+.button-right__front--black {
+    background-color:#222222;
+    border-radius: 50%;
+}
+.button-right__back--black {
+    background-color: #222222;
+    border: 2px solid #000000;
+}
+.button-right__right--black {
+    background-color: #222222;
+    border-radius: 50%;
+}
+.button-right__left--black {
+    background-color: #222222;
+    border-radius: 50%;
+}
+.button-right__top--black {
+    background-color: #222222;
+    border-radius: 50%;
+    border: 2px solid #000000;
+}
+.button-right__bottom--black {
+    background-color: #222222;
+    border-radius: 50%;
+    border: 2px solid #000000;
+}
+
+.buttons-right-3 {
+    position: absolute;
+    bottom: 2vmax;
+    right: 2.15vmax;
+    width: 18vmax;
+    height: 3vmax;
+    display: flex;
+    justify-content: space-between;
+}
+.button-large {
+    width: 8.5vmax;
+    height: 3vmax;
+    box-shadow: 0.35vmax 0.35vmax 0.35vmax rgba(34, 34, 34, .35);
+}
+.button-large__front {
+    width: 8.5vmax;
+    height: 0.5vmax;
+    transform-origin: bottom left;
+    transform: rotateX(-90deg) translateZ(2.5vmax);
+}
+.button-large__back {
+    width: 8.5vmax;
+    height: 0.5vmax;
+    transform-origin: top left;
+    transform: rotateX(-90deg) rotateY(180deg) translateX(-8.5vmax) translateY(-0.5vmax);
+}
+.button-large__right {
+    width: 3vmax;
+    height: 0.5vmax;
+    transform-origin: top left;
+    transform: rotateY(90deg) rotateZ(-90deg) translateZ(8.5vmax) translateX(-3vmax) translateY(-0.5vmax);
+}
+.button-large__left {
+    width: 3vmax;
+    height: 0.5vmax;
+    transform-origin: top left;
+    transform: rotateY(-90deg) rotateZ(90deg) translateY(-0.5vmax);
+}
+.button-large__top {
+    width: 8.5vmax;
+    height: 3vmax;
+    transform-origin: top left;
+    transform: translateZ(0.5vmax);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-large__bottom {
+    width: 8.5vmax;
+    height: 3vmax;
+    transform-origin: top left;
+    transform: rotateY(180deg) translateX(-8.5vmax);
+}
+.button-large__front {
+    background-color: #000;
+}
+.button-large__back {
+    background-color: #090909;
+}
+.button-large__right {
+    background-color: #090909;
+}
+.button-large__left {
+    background-color: #000;
+}
+.button-large__top {
+    background-color: #222;
+}
+.button-large__bottom {
+    background-color: #000;
+}
+
+.buttons-right-4
+{
+    position: absolute;
+    top: 16vmax;
+    right: 2.15vmax;
+    width: 18vmax;
+    height: 1.2vmax;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-right-prueba , .button-left-prueba{
+    width: 3.2vmax;
+    height: 1.2vmax;
+    border-radius: 25px;
+    margin-right: 4px;
+}
+
+/***********************/
+/* Parte central pokedex */
+/***********************/
+.wheel {
+    transform: rotateX(90deg) translateY(0.75vmax);
+    bottom: 16vmax;
+    left: calc(50% - .55vmax);
+}
+.wheel-el {
+    width: 3vmax;
+    height: 3vmax;
+}
+.wheel-el__front {
+    width: 1.275vmax;
+    height: 32vmax;
+    transform: rotateX(-90deg) translateZ(1.5vmax);
+}
+.wheel-el__back {
+    width: 1.275vmax;
+    height: 32vmax;
+    transform: rotateX(90deg) translateZ(1.5vmax);
+}
+.wheel-el__top {
+    width: 1.275vmax;
+    height: 3vmax;
+    transform: rotateY(0deg) translateZ(16vmax);
+}
+.wheel-el__bottom {
+    width: 1.275vmax;
+    height: 3vmax;
+    transform: rotateY(180deg) translateZ(16vmax);
+}
+.wheel-el__right {
+    width: 32vmax;
+    height: 3vmax;
+    transform: rotateY(90deg) translateZ(0.5882352941vmax);
+}
+.wheel-el__left {
+    width: 32vmax;
+    height: 3vmax;
+    transform: rotateY(90deg) translateZ(-0.5882352941vmax);
+}
+.wheel-el:nth-of-type(2) {
+    transform: rotateZ(45deg);
+}
+.wheel-el:nth-of-type(3) {
+    transform: rotateZ(90deg);
+}
+.wheel-el:nth-of-type(4) {
+    transform: rotateZ(135deg);
+}
+.wheel-el__front {
+    background-color: #f4153a;
+}
+.wheel-el__back {
+    background-color: #ab0823;
+}
+.wheel-el__right {
+    background-color: #ab0823;
+}
+.wheel-el__left {
+    background-color: #7a0619;
+}
+.wheel-el__top {
+    background-color: #dc0a2d;
+}
+.wheel-el__bottom {
+    background-color: #7a0619;
+}
+/***********************/
+/* Estados */
+/***********************/
+.is-pokedex-open {
+    transform: translateZ(2.4vmax) rotateY(-180deg);
+    transition: transform 3s, translate 3s;
+}
+.is-pokemon-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s linear;
+}
+.is-shadow-hidden {
+    right: 100%;
+    transition: right 3s;
+}
+
+.contenedor_botones
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 8.5vmax;
+    left: 4.8vmax;
+    width: 8vmax;
+    height: 2.5vmax;
+    transform: translateZ(1.25vmax);
+}
+
+.contenedor_boton_negro
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 6vmax;
+    left: 1.2vmax;
+    width: 2.5vmax;
+    height: 2.5vmax;
+    transform: translateZ(1.25vmax);
+}
+
+.flecha
+{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    border-top: solid 5px;
+    border-right: solid 5px;
+    cursor: pointer;
+}
+
+.flecha.derecha
+{
+    transform: rotate(45deg);
+}
+
+.flecha.abajo
+{
+    transform: rotate(135deg);
+    display: none;
+}
+
+.flecha.izquierda
+{
+    transform: rotate(225deg);
+}
+
+.flecha.arriba
+{
+    transform: rotate(315deg);
+    display: none;
+}
+
+
+.circulo_rojo
+{
+    position: absolute;
+    width: 0.5vmax;
+    height: 0.5vmax;
+    background-color: #dc0a2d;
+    border-radius: 50%;
+}
+
+
+.circulo_uno
+{
+    top: 0.5vmax;
+    left: 6vmax;
+    width: 0.5vmax;
+    height: 0.5vmax;
+    background-color: #dc0a2d;
+    border-radius: 50%;
+}
+
+
+.circulo_dos
+{
+    top: 0.5vmax;
+    right: 7vmax;
+    width: 0.5vmax;
+    height: 0.5vmax;
+    background-color: #dc0a2d;
+    border-radius: 50%;
+}
+
+.circulo_tres
+{
+    bottom: 0.5vmax;
+    left: 1.4vmax;
+    width: 0.5vmax;
+    height: 0.5vmax;
+    background-color: #dc0a2d;
+    border-radius: 50%;
+}
+
+.cont_lineas
+{
+    position: absolute;
+    bottom: 0vmax;
+    right: 1.3vmax;
+    width: 2vmax;
+    height: 1.3vmax;
+    display: flex; 
+    flex-direction: column; 
+    padding: 4px; 
+    justify-content: space-between;
+}
+
+.lineas
+{
+    background-color: gray; 
+    height: 0.5px;
+}
+
+
+.button-right__front-prueba
+{
+    width: 3.02vmax;
+    height: 1.2vmax;
+    transform-origin: bottom left;
+    transform: rotateX(-90deg) translateZ(2.45vmax);
+}
+
+.button-right__back-prueba
+{
+    width: 3.02vmax;
+    height: 1.2vmax;
+    transform-origin: top left;
+    transform: rotateX(-90deg) rotateY(180deg) translateX(-2.925vmax) translateY(-0.5vmax);
+}
+
+.button-right__right-prueba
+{
+    width: 3.02vmax;
+    height: 1.2vmax;
+    transform-origin: top left;
+    transform: rotateY(90deg) rotateZ(-90deg) translateZ(2.925vmax) translateX(-2.95vmax) translateY(-0.5vmax);
+}
+
+.button-right__left-prueba
+{
+    width: 3.02vmax;
+    height: 1.2vmax;
+    transform-origin: top left;
+    transform: rotateY(-90deg) rotateZ(90deg) translateY(-0.5vmax);
+}
+
+.button-right__top-prueba
+{
+    width: 3.02vmax;
+    height: 1.2vmax;
+    border-radius: 25px;
+    background-color: #222;
+    transform-origin: top left;
+    transform: translateZ(0.5vmax);
+}
+
+.button-right__top--red-prueba
+{
+    background-color: #ac162d;
+}
+
+.button-right__bottom-prueba
+{
+    width: 3.02vmax;
+    height: 1.2vmax;
+    border-radius: 25px;
+    background-color: #222;
+    transform-origin: top left;
+    transform: rotateY(180deg) translateX(-2.925vmax);
+}
+
+.button-right__bottom--red-prueba
+{
+    background-color: #ac162d;
+}
+
+
+.button-right__top--blue-prueba
+{
+    background-color: #2596be;
+}
+
+.button-right__bottom--blue-prueba
+{
+    background-color: #2596be;
+}
+
+.screen-show-pokemon
+{
+    width: 84%; 
+    height: 80.5%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 5px;
+}
+
+.creen-show-pokemon-fondo
+{
+    background-color: #81abd2;
+}
+
+.Imagen-Pokemon
+{
+    width: inherit; 
+    height: inherit;
+}
+
+.letraColor
+{
+    color: white;
+}
+
+.triangulo_tapa
+{
+    position: absolute; 
+    top: 45%;
+    left: 8px;
+    width: 0; height: 0; 
+    border-left: 20px solid #fac20e;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+
+.borde_tapa
+{
+    position: absolute;
+    bottom: 6%;
+    left: 25%;
+    width: 12vmax;
+    height: 2vmax;
+    border: 1px solid #73040d;
+    border-radius: 10px;
+}
+
+.conten_letra_tipo
+{
+    width: 100%;
+}
+
+.letra_tipo
+{
+    color: white;
+}
+
+.campo_un_tipo
+{
+    width: 100%; 
+    height: 100%; 
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.letter_tipo
+{
+    padding: 4px;
+    border-radius: 10px;
+    color: white;
+    font-weight: lighter;
+}
+
+.conte_varios_tipos
+{
+    width: 100%; 
+    height: 100%; 
+    display:flex;
+}
+
+.campo_varios_tipos
+{
+    display: flex; 
+    width: 100%; 
+    justify-content: center;
+    align-items: center;
+}
+
+#btnEscuchar
+{
+    cursor: pointer;
+}
